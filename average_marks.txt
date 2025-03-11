@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+char *subject[]={"chemistry","physics","maths"};
+char *exam_set[]={"assignments","coursework","midterm","endofterm"};
+
+ float marks[3][4];
+ float sum;
+ float average;
+
+for(int i=0; i<3; i++){
+    printf("Please enter marks for %s:\n",subject[i]);
+     sum =0;
+for(int x=0; x<4; x++){
+    printf("%s:",exam_set[x]);
+    scanf("%f",&marks[i][x]);
+      sum+=marks[i][x];
+}
+  average=sum/4;  
+}
+  for(int i=0; i<3; i++){
+      printf("\nAverage mark for %s:%.2f\n",subject[i],average);
+  }
+   return 0;
+}
